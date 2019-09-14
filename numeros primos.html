@@ -1,0 +1,41 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Prime number identificator</title>
+	</head>
+	<body>
+		<script>
+		var noPrime=0;
+		var negative=0;
+		function divisors(integer) {
+			if(integer<0){
+				negative=integer;
+				integer=integer*-1;
+			}
+			for(var i=2;i<integer;i++){
+				if(integer%i==0){
+					noPrime++;
+				}
+			}
+		if(negative!=0){
+			if(noPrime>0){
+			document.write(negative+" is not a prime number");
+			}
+			else{
+			document.write(negative+" is a prime number");	
+			}
+		}
+		if(integer>0&&negative==0){	
+			if(noPrime>0){
+			document.write(integer+" is not a prime number");
+			}
+			else{
+			document.write(integer+" is a prime number");	
+			}
+		}
+	}
+	divisors(window.prompt());
+		</script>
+	</body>
+	</html>
